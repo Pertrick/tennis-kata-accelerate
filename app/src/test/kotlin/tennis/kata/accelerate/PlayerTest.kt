@@ -8,14 +8,11 @@ import org.junit.jupiter.api.Test
 
 class PlayerTest {
 
+    private val player = Player("Aisha");
     @Test
-    fun initialScoreForBothPlayersIs0() {
-        val classUnderTest = Player()
-        Assertions.assertThat(classUnderTest.points).isEqualTo(0)
+    fun initialScoreForPlayerIsZero() {
+        Assertions.assertThat(player.getPoint()).isEqualTo(0)
     }
 
-    @Test
-    fun increaseScore() {
 
-    }
 }
