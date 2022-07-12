@@ -18,7 +18,7 @@ class PlayerTest {
     }
 
     @Test
-    fun pointsCanBeAddedtoEachPlayer(){
+    fun pointsCanBeAddedToEachPlayer(){
 
         val player1 = Player("Aisha");
         val player2 = Player("Williams");

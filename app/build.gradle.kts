@@ -25,6 +25,8 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("junit:junit:4.13.1")
+    implementation("junit:junit:4.13.1")
 
     testImplementation(platform("org.junit:junit-bom:5.8.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
