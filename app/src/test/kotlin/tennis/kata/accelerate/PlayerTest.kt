@@ -8,10 +8,49 @@ import org.junit.jupiter.api.Test
 
 class PlayerTest {
 
-    private val player = Player("Aisha");
     @Test
     fun initialScoreForPlayerIsZero() {
-        Assertions.assertThat(player.getPoint()).isEqualTo(0)
+        val player1 = Player("Aisha");
+        val player2 = Player("Williams");
+
+        Assertions.assertThat(player1.getPoint()).isEqualTo(0);
+        Assertions.assertThat(player2.getPoint()).isEqualTo(0);
+    }
+
+    @Test
+    fun pointsCanBeAddedtoEachPlayer(){
+
+        val player1 = Player("Aisha");
+        val player2 = Player("Williams");
+
+        for( i in 1..3){
+            player1.winBall();
+        }
+
+        Assertions.assertThat(player1.getPoint()).isEqualTo(3);
+
+        for( i in 1..4){
+            player2.winBall();
+        }
+
+        Assertions.assertThat(player2.getPoint()).isEqualTo(4);
+
+    }
+
+    @Test
+    fun playerPointsDescription(){
+
+        val player1 = Player("Aisha");
+        val player2 = Player("Williams");
+
+        Assertions.assertThat(player1.getPointDescription()).isEqualTo("Love");
+
+        for( i in 1..3){
+            player2.winBall();
+        }
+
+        Assertions.assertThat(player2.getPointDescription()).isEqualTo("Forty");
+
     }
 
 
